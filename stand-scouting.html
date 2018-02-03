@@ -10,23 +10,23 @@
 	</head>
 	<body>
 	    <form onsubmit="onSubmit()">
-	    	<label>Scouter Name: <input type="text"id="name"required="true"autofocus="true"></label>
+	    	<label>Scouter Name: <input type="text"id="name"name="Scouter Name"required="true"autofocus="true"></label>
     		<fieldset style="background-color:#8db3e2">
     			<legend>Match Info</legend>
-	    		<label>Team Number: <input type="number" id="team-number" required="true" min="1" max="9999"></label>
-	    		<label>Team Color: <select required="true">
+	    		<label>Team Number: <input type="number" id="team-number" name="Team Number" required="true" min="1" max="9999"></label>
+	    		<label>Team Color: <select required="true" name="Team Color">
 	    		    <option value=""selected="selected"disabled="true">Select color</option>
 	    		    <option value="Red">Red</option>
 	    		    <option value="Blue">Blue</option>
 	    		</select></label>
-	    		<label>Match Number: <input type="number" id="match-number" required="true" min="1" max="200"></label>
-	    		<label>Robot Start: <select id="robot-station"required="true">
+	    		<label>Match Number: <input type="number" id="match-number" name="Match Number" required="true" min="1" max="200"></label>
+	    		<label>Robot Start: <select id="robot-station"required="true" name="Robot Starting Position">
 	    		    <option value=""selected="selected" disabled="true">Select station</option>
 	    		    <option value="Far">Forward</option>
 	    		    <option value="Mid">Middle</option>
 	    		    <option value="Close">Close</option>
 	    		</select></label>
-	    		<label>Driver Station: <select id="robot-station"required="true">
+	    		<label>Driver Station: <select id="robot-station"required="true" name="Driver Station Position">
 	    		    <option value=""selected="selected" disabled="true">Select station</option>
 	    		    <option value="Far">Forward</option>
 	    		    <option value="Mid">Middle</option>
@@ -35,7 +35,7 @@
     		</fieldset>
     		<fieldset style="background-color:#e5b8b7">
     			<legend>Autonomous</legend>
-	    		<label>Autonomous: <select id="auton"required="true">
+	    		<label>Autonomous: <select id="auton"required="true" name="Autonomous Routine">
 	    		    <option value=""selected="selected" disabled="true">Select auton</option>
 	    		    <option value="Nothing">Nothing</option>
 	    		    <option value="Move">Move</option>
@@ -43,47 +43,47 @@
 	    		    <option value="Scale">Scale</option>
 	    		</select></label>
 	    		
-	    		<label>Switch Position: <select required="true">
+	    		<label>Switch Position: <select required="true" name="Switch Position">
 	    			<option value=""selected="selected" disabled="true">Select position</option>
 	    			<option value="Far">Far</option>
 	    			<option value="Close">Close</option>
 	    		</select></label>
-    			<label>Scale Position: <select required="true">
+    			<label>Scale Position: <select required="true" name="Scale Position">
 	    			<option value=""selected="selected" disabled="true">Select position</option>
 	    			<option value="Far">Far</option>
 	    			<option value="Close">Close</option>
 	    		</select></label>
-	    		<label>Cubes placed in scale: <input type="number"min="0"max="2"value="0"></label>
-	    		<label>Their side? <input type="checkbox"></label>
-	    		<label>Cubes placed in switch: <input type="number"min="0"max="2"value="0"></label>
-	    		<label>Their side? <input type="checkbox"></label>
+	    		<label>Cubes placed in switch: <input type="number"min="0"max="2"value="0" name="Auton cubes placed in switch"></label>
+	    		<label>Their side<u>?</u> <input accesskey="?"type="checkbox" name="Were cubes on their side of switch"></label>
+	    		<label>Cubes placed in scale: <input type="number"min="0"max="2"value="0" name="Auton cubes placed in scale"></label>
+	    		<label>Their<u> </u>side? <input accesskey=" "type="checkbox" name="Were cubes on their side of scale"></label>
 	    		
-	    		<label accesskey="a"><u>A</u>uto line: <input type="checkbox"></label>
+	    		<label accesskey="a"><u>A</u>uto line: <input type="checkbox" name="Crossed Auto Line"></label>
     		</fieldset>
     		<fieldset>
     			<legend>Teleoperated</legend>
 	    		<fieldset style="background-color:#b6dde8;display:inline">
 	    			<legend>Cubes</legend>
-		    		<label accesskey="u">Amount of cubes mo<u>v</u>ed: <input id="cubes-moved"type="number" min="0" max="30"value="0"></label>
+		    		<label accesskey="u">Amount of cubes mo<u>v</u>ed: <input id="cubes-moved" name="Amount of cubes moved" type="number" min="0" max="30"value="0"></label>
 
 		    		<fieldset style="display:inline">
 		    		    <legend>Picked up from:</legend>
-		    		    <label accesskey="o">Fl<u>o</u>or: <input type="checkbox"></label>
-		    		    <label accesskey="x">E<u>x</u>change Zone: <input type="checkbox"></label>
-		    		    <label accesskey="z">Power Cube <u>Z</u>one: <input type="checkbox"></label>
-		    		    <label accesskey="p"><u>P</u>ortal: <input type="checkbox"></label>
+		    		    <label accesskey="o">Fl<u>o</u>or: <input type="checkbox" name="Picked cubes from floor"></label>
+		    		    <label accesskey="x">E<u>x</u>change Zone: <input type="checkbox" name="Picked cubes from exchange zone"></label>
+		    		    <label accesskey="z">Power Cube <u>Z</u>one: <input type="checkbox" name="Picked cubes from power cube zone"></label>
+		    		    <label accesskey="p"><u>P</u>ortal: <input type="checkbox" name="Picked cubes from portal"></label>
 		    		</fieldset>
 	    		</fieldset>
 	    		<fieldset style="background-color:#ed95e5;display:inline">
 	    			<legend>Scale</legend>
-    			    <label accesskey="d">Owne<u>d</u>: <input type="number"min="0"max="30"value="0"></label>
-    			    <label accesskey="y">Neutralit<u>y</u>: <input type="number"min="0"max="30"value="0"></label>
-    			    <label accesskey=":">Not Ownership<u>:</u> <input type="number"min="0"max="30"value="0"></label>
-    			    <label accesskey="e">Fail<u>e</u>d: <input type="number"min="0"max="30"value="0"></label>
+    			    <label accesskey="d">Owne<u>d</u>: <input name="Placed cubes in scale while owned"type="number"min="0"max="30"value="0"></label>
+    			    <label accesskey="y">Neutralit<u>y</u>: <input name="Placed cubes in scale while neutral"type="number"min="0"max="30"value="0"></label>
+    			    <label accesskey=":">Not Ownership<u>:</u> <input name="Placed cubes in scale while not owned"type="number"min="0"max="30"value="0"></label>
+    			    <label accesskey="e">Fail<u>e</u>d: <input name="Failed to place cubes in scale"type="number"min="0"max="30"value="0"></label>
 	            </fieldset>
 	    		<fieldset style="background-color:#fbd4b4">
 	    			<legend>Switch</legend>
-	    			<label><select>
+	    			<label><select name="Where they placed cubes">
 	    			    <option value="Own Switch">Own Switch</option>
 	    			    <option value="Their Switch">Their Switch</option>
 	    			    <option value="Both">Both</option>
@@ -91,46 +91,46 @@
 	    			</select></label>
 	    			<fieldset style="display:inline">
 	    			    <legend>Alliance Side Placed</legend>
-	    			    <label accesskey="w">O<u>w</u>nership: <input type="number"min="0"max="30"value="0"></label>
-	    			    <label accesskey="n"><u>N</u>eutrality: <input type="number"min="0"max="30"value="0"></label>
-	    			    <label accesskey="t">No<u>t</u> Ownership: <input type="number"min="0"max="30"value="0"></label>
+	    			    <label accesskey="w">O<u>w</u>nership: <input name="Placed cubes in their switch while owned"type="number"min="0"max="30"value="0"></label>
+	    			    <label accesskey="n"><u>N</u>eutrality: <input name="Placed cubes in their switch while neutral"type="number"min="0"max="30"value="0"></label>
+	    			    <label accesskey="t">No<u>t</u> Ownership: <input name="Placed cubes in their switch while not owned"type="number"min="0"max="30"value="0"></label>
 	    			</fieldset>
 	    			<fieldset style="display:inline">
 	    			    <legend>Opposing Side Placed</legend>
-	    			    <label accesskey="h">Owners<u>h</u>ip: <input type="number"min="0"max="30"value="0"></label>
-	    			    <label accesskey="r">Neut<u>r</u>ality: <input type="number"min="0"max="30"value="0"></label>
-	    			    <label accesskey="s">Not Owner<u>s</u>hip: <input type="number"min="0"max="30"value="0"></label>
+	    			    <label accesskey="h">Owners<u>h</u>ip: <input name="Placed cubes in other switch while owned"type="number"min="0"max="30"value="0"></label>
+	    			    <label accesskey="r">Neut<u>r</u>ality: <input name="Placed cubes in other switch while neutral"type="number"min="0"max="30"value="0"></label>
+	    			    <label accesskey="s">Not Owner<u>s</u>hip: <input name="Placed cubes in other switch while not owned"type="number"min="0"max="30"value="0"></label>
 	    			</fieldset>
 	            </fieldset>
 	            <fieldset style="background-color:#ed9599">
 	    			<legend>Exchange</legend>
-    			    <label accesskey="c"><u>C</u>ubes succesfully put in: <input id="exchange-cubes"type="number"min="0"max="30"value="0"></label>
-    			    <label accesskey="i">Cubes fa<u>i</u>led: <input type="number"min="0"max="30"value="0"></label>
-    			    <label accesskey="f"><u>F</u>orce: <input type="number"min="0"max="3"value="0"></label> <input type="checkbox">
-    			    <label accesskey="b"><u>B</u>oost: <input type="number"min="0"max="3"value="0"></label> <input type="checkbox">
-    			    <label accesskey="l"><u>L</u>evitate: <input type="number"min="0"max="3"value="0"></label> <input type="checkbox">
+    			    <label accesskey="c"><u>C</u>ubes succesfully put in: <input name="Cubes successfully put in exchange" id="exchange-cubes"type="number"min="0"max="30"value="0"></label>
+    			    <label accesskey="i">Cubes fa<u>i</u>led: <input name="Cubes failed to put in exchange" type="number"min="0"max="30"value="0"></label>
+    			    <label accesskey="f"><u>F</u>orce: <input name="Cubes put in force"type="number"min="0"max="3"value="0"></label> <input name="Used force?"type="checkbox">
+    			    <label accesskey="b"><u>B</u>oost: <input name="Cubes put in boost"type="number"min="0"max="3"value="0"></label> <input name="Used boost?"type="checkbox">
+    			    <label accesskey="l"><u>L</u>evitate: <input name="Cubes put in levitate"type="number"min="0"max="3"value="0"></label> <input name="Used levitate?"type="checkbox">
 	            </fieldset>
 	            <fieldset style="background-color:#d6e3bc">
 	            	<legend>Climbing</legend>
-		            <label>Did it climb? <select id="climbed">
+		            <label>Did it climb? <select id="climbed" name="Did it climb?">
 		                <option selected="true"value="DNA">Did not attempt</option>
 		                <option value="Failed">Failed</option>
 		                <option value="Success">Success</option>
 		            </select></label>
-		            <label>How many did it help: <input type="number" min="0"max="2"></label>
-		            <label>Was it helped? <input type="checkbox"></label>
-		            <label>If so, how approx fast in seconds? Leave 0 for didnt climb: <input id="climb-time"type="number"min="0"max="30"value="0"></label>
+		            <label>How many did it help: <input type="number" min="0"max="2" name="How many robots did it help?"></label>
+		            <label>Was it helped? <input type="checkbox" name="Was it helped to climb"></label>
+		            <label>If so, how approx fast in seconds? Leave 0 for didnt climb: <input name="How long did it take to climb? (seconds)"id="climb-time"type="number"min="0"max="30"value="0"></label>
 	            </fieldset>
 	            <fieldset style="background-color:#ffff00">
 	           		<legend>Defense</legend>
-		            <label>How well does it play defense (Academy scale:) <select>
+		            <label>How well does it play defense (Academy scale:) <select name="Played defense">
 		                <option value="NA">NA</option>
 		                <option value="1">1</option>
 		                <option value="2">2</option>
 		                <option value="3">3</option>
 		                <option value="4">4</option>
 		            </select></label>
-		            <label>How well does it react to defense (Academy scale:) <select>
+		            <label>How well does it react to defense (Academy scale:) <select name="Reacted to defense">
 		                <option value="NA">NA</option>
 		                <option value="1">1</option>
 		                <option value="2">2</option>
@@ -138,19 +138,19 @@
 		                <option value="4">4</option>
 		            </select></label>
 	            </fieldset>
-	            <label>Primary focus: <select id="focus" required="true">
+	            <label>Primary focus: <select id="focus" required="true" name="Primary Focus">
 	                <option value=""disabled="true"selected="true"></option>
 	                <option value="Switch">Switch</option>
 	                <option value="Scale">Scale</option>
 	                <option value="Exchange">Exchange</option>
 	                <option value="Defense">Defense</option>
 	            </select></label>
-	            <label>Red score: <input id="red-score"type="number"min="0"max="700"required="true"></label>
-	            <label>Blue score: <input id="blue-score"type="number"min="0"max="700"required="true"></label>
-	            <label>Red ownership: <input id="red-score"type="number"min="0"max="700"required="true"></label>
-	            <label>Blue ownership: <input id="blue-score"type="number"min="0"max="700"required="true"></label>
+	            <label>Red score: <input name="Red score"id="red-score"type="number"min="0"max="700"required="true"></label>
+	            <label>Blue score: <input name="Blue score"id="blue-score"type="number"min="0"max="700"required="true"></label>
+	            <label>Red ownership: <input name="Red ownership"id="red-score"type="number"min="0"max="700"required="true"></label>
+	            <label>Blue ownership: <input name="Blue ownership"id="blue-score"type="number"min="0"max="700"required="true"></label>
             </fieldset>
-            <label>Comments:<input id="notes"type="text"></label> <label>Driver notes/fouls: <input id="driver-notes"type="text"></label>
+            <label>Comments:<input id="notes"type="text" name="Comments"></label> <label>Driver notes/fouls: <input name="Driver notes/fouls"id="driver-notes"type="text"></label>
             <br>
             <br>
     		<input type="submit"value="Submit">
@@ -191,7 +191,7 @@
 	    function onSubmit(){
 	        var output = "";
 	        
-	       	$("input,textarea,select", $this).not("[type='submit']").not("[type='reset']").each(function() {
+	       	$("input,textarea,select").not("[type='submit']").not("[type='reset']").each(function() {
 				var $thisInput = $(this);
 
 				if ($thisInput.attr("type") === "checkbox") {
@@ -205,6 +205,20 @@
 			});
 	        
 	        download($("#team-number").val() + "@ match " + $("#match-number").val()+","+new Date().toLocaleTimeString() + ".csv", output);
+	    }
+	    
+	    function generateHeader() {
+	    	var output = "";
+	        
+	       	$("input,textarea,select").not("[type='submit']").not("[type='reset']").each(function() {
+				var $thisInput = $(this);
+
+				output += $thisInput.attr("name");
+				
+				output += ",";
+			});
+	        
+	        download("Header - " + new Date() + ".csv", output);
 	    }
 	</script>
 </html>
