@@ -53,10 +53,12 @@
 	    			<option value="Far">Far</option>
 	    			<option value="Close">Close</option>
 	    		</select></label>
-	    		<label>Cubes placed in switch: <input type="number"min="0"max="2"value="0" name="Auton cubes placed in switch"></label>
+	    		<label>Cubes placed in s<u>w</u>itch: <input accesskey="w"type="number"min="0"max="2"value="0" name="Auton cubes placed in switch"></label>
 	    		<label>Their side<u>?</u> <input accesskey="?"type="checkbox" name="Were cubes on their side of switch"></label>
-	    		<label>Cubes placed in scale: <input type="number"min="0"max="2"value="0" name="Auton cubes placed in scale"></label>
+	    		<label>Time to switch <u>(</u>seconds:) <input accesskey="(" type="number" min="0" max="15" name="How long it took to get to switch (seconds)"></label>
+	    		<label>Cubes placed in thei<u>r</u> scale: <input accesskey="r" type="number"min="0"max="2"value="0" name="Auton cubes placed in scale"></label>
 	    		<label>Their<u> </u>side? <input accesskey=" "type="checkbox" name="Were cubes on their side of scale"></label>
+	    		<label>Time to scale (seconds:<u>)</u> <input accesskey=")" type="number" min="0" max="15" name="How long it took to get to scale (seconds)"></label>
 	    		
 	    		<label accesskey="a"><u>A</u>uto line: <input type="checkbox" name="Crossed Auto Line"></label>
     		</fieldset>
@@ -76,10 +78,12 @@
 	    		</fieldset>
 	    		<fieldset style="background-color:#ed95e5;display:inline">
 	    			<legend>Scale</legend>
-    			    <label accesskey="d">Owne<u>d</u>: <input name="Placed cubes in scale while owned"type="number"min="0"max="30"value="0"></label>
-    			    <label accesskey="y">Neutralit<u>y</u>: <input name="Placed cubes in scale while neutral"type="number"min="0"max="30"value="0"></label>
-    			    <label accesskey=":">Not Ownership<u>:</u> <input name="Placed cubes in scale while not owned"type="number"min="0"max="30"value="0"></label>
-    			    <label accesskey="e">Fail<u>e</u>d: <input name="Failed to place cubes in scale"type="number"min="0"max="30"value="0"></label>
+	    			<label accesskey="d">Cubes place<u>d</u>: <input name="Cubed placed in scale" type="number" min="0" max="30" value="0"></label>
+	    			<fieldset>
+	    				<legend>Placed:</legend>
+	    				<label acesskey=":">High on scale<u>:</u> <input name="Placed high on scale" type="checkbox"></label>
+	    				<label accesskey="e">Low on scal<u>e</u>: <input name="Placed low on scale" type="checkbox"></label>
+	    			</fieldset>
 	            </fieldset>
 	    		<fieldset style="background-color:#fbd4b4">
 	    			<legend>Switch</legend>
@@ -89,18 +93,8 @@
 	    			    <option value="Both">Both</option>
 	    			    <option value="None"selected="selected">None</option>
 	    			</select></label>
-	    			<fieldset style="display:inline">
-	    			    <legend>Alliance Side Placed</legend>
-	    			    <label accesskey="w">O<u>w</u>nership: <input name="Placed cubes in their switch while owned"type="number"min="0"max="30"value="0"></label>
-	    			    <label accesskey="n"><u>N</u>eutrality: <input name="Placed cubes in their switch while neutral"type="number"min="0"max="30"value="0"></label>
-	    			    <label accesskey="t">No<u>t</u> Ownership: <input name="Placed cubes in their switch while not owned"type="number"min="0"max="30"value="0"></label>
-	    			</fieldset>
-	    			<fieldset style="display:inline">
-	    			    <legend>Opposing Side Placed</legend>
-	    			    <label accesskey="h">Owners<u>h</u>ip: <input name="Placed cubes in other switch while owned"type="number"min="0"max="30"value="0"></label>
-	    			    <label accesskey="r">Neut<u>r</u>ality: <input name="Placed cubes in other switch while neutral"type="number"min="0"max="30"value="0"></label>
-	    			    <label accesskey="s">Not Owner<u>s</u>hip: <input name="Placed cubes in other switch while not owned"type="number"min="0"max="30"value="0"></label>
-	    			</fieldset>
+	    			<label accesskey="n">Placed in allia<u>n</u>ce switch: <input name="Cubes placed in alliance switch" type="number" min="0" max="30" value="0"></label>
+	    			<label accesskey="s">Placed in oppo<u>s</u>ing switch: <input name="Cubes placed in opposing switch" type="number" min="0" max="30" value="0"></label>
 	            </fieldset>
 	            <fieldset style="background-color:#ed9599">
 	    			<legend>Exchange</legend>
@@ -151,6 +145,9 @@
 	            <label>Blue ownership: <input name="Blue ownership"id="blue-score"type="number"min="0"max="700"required="true"></label>
             </fieldset>
             <label>Comments:<input id="notes"type="text" name="Comments"></label> <label>Driver notes/fouls: <input name="Driver notes/fouls"id="driver-notes"type="text"></label>
+            <label>Got <u>Y</u>ellow Card: <input accesskey="y" name="Yellow card" type="checkbox"></label>
+            <label>Go<u>t</u> Foul: <input accesskey="t" name="Fouled" type="checkbox"></label>
+            <label>Got Tec<u>h</u> Foul: <input accesskey="h" name="Tech Fouled" type="checkbox"></label>
             <br>
             <br>
     		<input type="submit"value="Submit">
