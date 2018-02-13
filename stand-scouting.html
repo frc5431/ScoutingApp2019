@@ -87,7 +87,7 @@
 	            </fieldset>
 	    		<fieldset style="background-color:#fbd4b4">
 	    			<legend>Switch</legend>
-	    			<label><select name="Where they placed cubes">
+	    			<label><select name="Where they placed cubes (in regard to switch)">
 	    			    <option value="Own Switch">Own Switch</option>
 	    			    <option value="Their Switch">Their Switch</option>
 	    			    <option value="Both">Both</option>
@@ -192,7 +192,7 @@
 				var $thisInput = $(this);
 
 				if ($thisInput.attr("type") === "checkbox") {
-					output += $thisInput.is(":checked") ? "0" : "1";
+					output += $thisInput.is(":checked") ? "1" : "0";
 				}
 				else {
 					output += $thisInput.val();
