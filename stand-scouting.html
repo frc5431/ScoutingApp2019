@@ -22,13 +22,13 @@
 	    		<label>Match Number: <input type="number" id="match-number" name="Match Number" required="true" min="1" max="200"></label>
 	    		<label>Robot Start: <select id="robot-station"required="true" name="Robot Starting Position">
 	    		    <option value=""selected="selected" disabled="true">Select station</option>
-	    		    <option value="Far">Forward</option>
+	    		    <option value="Far">Far</option>
 	    		    <option value="Mid">Middle</option>
 	    		    <option value="Close">Close</option>
 	    		</select></label>
 	    		<label>Driver Station: <select id="robot-station"required="true" name="Driver Station Position">
 	    		    <option value=""selected="selected" disabled="true">Select station</option>
-	    		    <option value="Far">Forward</option>
+	    		    <option value="Far">Far</option>
 	    		    <option value="Mid">Middle</option>
 	    		    <option value="Close">Close</option>
 	    		</select></label>
@@ -88,8 +88,8 @@
 	    		<fieldset style="background-color:#fbd4b4">
 	    			<legend>Switch</legend>
 	    			<label><select name="Where they placed cubes (in regard to switch)">
-	    			    <option value="Own Switch">Own Switch</option>
-	    			    <option value="Their Switch">Their Switch</option>
+	    			    <option value="Alliance Switch">Alliance Switch</option>
+	    			    <option value="Opponent Switch">Opponent Switch</option>
 	    			    <option value="Both">Both</option>
 	    			    <option value="None"selected="selected">None</option>
 	    			</select></label>
@@ -108,6 +108,7 @@
 	            	<legend>Climbing</legend>
 		            <label>Did it climb? <select id="climbed" name="Did it climb?">
 		                <option selected="true"value="DNA">Did not attempt</option>
+		                <option value="Parked">Parked</option>
 		                <option value="Failed">Failed</option>
 		                <option value="Success">Success</option>
 		            </select></label>
