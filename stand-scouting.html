@@ -197,7 +197,7 @@
 					output += $thisInput.is(":checked") ? "1" : "0";
 				}
 				else {
-					output += $thisInput.val();
+					output += encodeURIComponent($thisInput.val());
 				}
 				
 				output += ",";
