@@ -34,122 +34,74 @@
 	    		</select></label>
     		</fieldset>
     		<fieldset style="background-color:#e5b8b7">
-    			<legend>Autonomous</legend>
-	    		<label>Autonomous: <select id="auton"required="true" name="Autonomous Routine">
-	    		    <option value=""selected="selected" disabled="true">Select auton</option>
-	    		    <option value="Nothing">Nothing</option>
-	    		    <option value="Move">Move</option>
-	    		    <option value="Switch">Switch</option>
-	    		    <option value="Scale">Scale</option>
+    			<legend>Sandstorm</legend>
+	    		<label>Type: <select required="true" name="Sandstorm Type">
+	    			<option value=""selected="selected" disabled="true">Select type</option>
+	    			<option value="Blind">Blind</option>
+	    			<option value="Auto">Auto</option>
+	    			<option value="Camera">Camera</option>
 	    		</select></label>
-	    		
-	    		<label>Switch Position: <select required="true" name="Switch Position">
-	    			<option value=""selected="selected" disabled="true">Select position</option>
-	    			<option value="Far">Far</option>
-	    			<option value="Close">Close</option>
-	    		</select></label>
-    			<label>Scale Position: <select required="true" name="Scale Position">
-	    			<option value=""selected="selected" disabled="true">Select position</option>
-	    			<option value="Far">Far</option>
-	    			<option value="Close">Close</option>
-	    		</select></label>
-	    		<label>Cubes placed in s<u>w</u>itch: <input accesskey="w"type="number"min="0"max="2"value="0" name="Auton cubes placed in switch"></label>
-	    		<label>Their side<u>?</u> <input accesskey="?"type="checkbox" name="Were cubes on their side of switch"></label>
-	    		<label>Time to switch <u>(</u>seconds:) <input accesskey="(" type="number" min="0" max="15" name="How long it took to get to switch (seconds)"></label>
-	    		<label>Cubes placed in thei<u>r</u> scale: <input accesskey="r" type="number"min="0"max="2"value="0" name="Auton cubes placed in scale"></label>
-	    		<label>Their<u> </u>side? <input accesskey=" "type="checkbox" name="Were cubes on their side of scale"></label>
-	    		<label>Time to scale (seconds:<u>)</u> <input accesskey=")" type="number" min="0" max="15" name="How long it took to get to scale (seconds)"></label>
-	    		
-	    		<label accesskey="a"><u>A</u>uto line: <input type="checkbox" name="Crossed Auto Line"></label>
+	    		<label>Hatches on Rocket: <input name="Sandstorm Hatches on Rocket" type="number" min="0" max="12" value="0"></label>
+	    		<label>Balls on Rocket: <input name="Sandstorm Balls on Rocket" type="number" min="0" max="12" value="0"></label>
+	    		<label>Hab 1: <input type="checkbox" name="Sandstorm Hab 1"></label>
+	    		<label>Hatches on Cargo: <input name="Sandstorm Hatches on Cargo" type="number" min="0" max="12" value="0"></label>
+	    		<label>Balls on Cargo: <input name="Sandstorm Balls on Cargo" type="number" min="0" max="12" value="0"></label>
+	    		<label>Hab 2: <input type="checkbox" name="Sandstorm Hab 2"></label>
+	    		Height: <label>1 <input type="checkbox" name="Sandstorm Height 1"></label> <label>2 <input type="checkbox" name="Sandstorm Height 2"></label> <label>3 <input type="checkbox" name="Sandstorm Height 3"></label>
     		</fieldset>
-    		<fieldset>
+    		<fieldset style="background-color:#d6e3bc">
     			<legend>Teleoperated</legend>
 	    		<fieldset style="background-color:#b6dde8;display:inline">
-	    			<legend>Cubes</legend>
-		    		<label accesskey="u">Amount of cubes mo<u>v</u>ed: <input id="cubes-moved" name="Amount of cubes moved" type="number" min="0" max="30"value="0"></label>
-
-		    		<fieldset style="display:inline">
-		    		    <legend>Picked up from:</legend>
-		    		    <label accesskey="o">Fl<u>o</u>or: <input type="checkbox" name="Picked cubes from floor"></label>
-		    		    <label accesskey="x">E<u>x</u>change Zone: <input type="checkbox" name="Picked cubes from exchange zone"></label>
-		    		    <label accesskey="z">Power Cube <u>Z</u>one: <input type="checkbox" name="Picked cubes from power cube zone"></label>
-		    		    <label accesskey="p"><u>P</u>ortal: <input type="checkbox" name="Picked cubes from portal"></label>
-		    		</fieldset>
+	    			<legend>Balls</legend>
+					<label>Placed in Cargo: <input name="Balls in Cargo" type="number" min="0" max="12" value="0"></label>
+	    			<label>Placed in Rocket 1: <input name="Balls in Rocket 1" type="number" min="0" max="12" value="0"></label>
+	    			<label>Placed in Rocket 2: <input name="Balls in Rocket 2" type="number" min="0" max="12" value="0"></label>
+	    			<label>Floor Intake: <input type="checkbox" name="Floor Ball Intake"></label>
+	    			<label>Unsuccessful/Dropped: <input name="Dropped Balls" type="number" min="0" max="30" value="0"></label>
 	    		</fieldset>
 	    		<fieldset style="background-color:#ed95e5;display:inline">
-	    			<legend>Scale</legend>
-	    			<label accesskey="d">Cubes place<u>d</u>: <input name="Cubed placed in scale" type="number" min="0" max="30" value="0"></label>
-	    			<fieldset>
-	    				<legend>Placed:</legend>
-	    				<label acesskey=":">High on scale<u>:</u> <input name="Placed high on scale" type="checkbox"></label>
-	    				<label accesskey="e">Low on scal<u>e</u>: <input name="Placed low on scale" type="checkbox"></label>
-	    			</fieldset>
+	    			<legend>Hatches</legend>
+	    			<label>Placed in Cargo: <input name="Hatches in Cargo" type="number" min="0" max="12" value="0"></label>
+	    			<label>Placed in Rocket 1: <input name="Hatches in Rocket 1" type="number" min="0" max="12" value="0"></label>
+	    			<label>Placed in Rocket 2: <input name="Hatches in Rocket 2" type="number" min="0" max="12" value="0"></label>
+	    			<label>Floor Intake: <input type="checkbox" name="Floor Hatch Intake"></label>
+	    			<label>Unsuccessful/Dropped: <input name="Dropped Hatches" type="number" min="0" max="30" value="0"></label>
 	            </fieldset>
 	    		<fieldset style="background-color:#fbd4b4">
-	    			<legend>Switch</legend>
-	    			<label><select name="Where they placed cubes (in regard to switch)">
-	    			    <option value="Alliance Switch">Alliance Switch</option>
-	    			    <option value="Opponent Switch">Opponent Switch</option>
-	    			    <option value="Both">Both</option>
-	    			    <option value="None"selected="selected">None</option>
+	    			<legend>HAB</legend>
+	    			<label>Final Place: <select name="Final HAB Level">
+	    				<option value="Not in HAB" selected="selected">Not in HAB</option>
+	    			    <option value="1">1</option>
+	    			    <option value="2">2</option>
+	    			    <option value="3">3</option>
+	    			    <option value="Helped">Helped</option>
 	    			</select></label>
-	    			<label accesskey="n">Placed in allia<u>n</u>ce switch: <input name="Cubes placed in alliance switch" type="number" min="0" max="30" value="0"></label>
-	    			<label accesskey="s">Placed in oppo<u>s</u>ing switch: <input name="Cubes placed in opposing switch" type="number" min="0" max="30" value="0"></label>
-	            </fieldset>
-	            <fieldset style="background-color:#ed9599">
-	    			<legend>Exchange</legend>
-    			    <label accesskey="c"><u>C</u>ubes succesfully put in: <input name="Cubes successfully put in exchange" id="exchange-cubes"type="number"min="0"max="30"value="0"></label>
-    			    <label accesskey="i">Cubes fa<u>i</u>led: <input name="Cubes failed to put in exchange" type="number"min="0"max="30"value="0"></label>
-    			    <label accesskey="f"><u>F</u>orce: <input name="Cubes put in force"type="number"min="0"max="3"value="0"></label> <input name="Used force?"type="checkbox">
-    			    <label accesskey="b"><u>B</u>oost: <input name="Cubes put in boost"type="number"min="0"max="3"value="0"></label> <input name="Used boost?"type="checkbox">
-    			    <label accesskey="l"><u>L</u>evitate: <input name="Cubes put in levitate"type="number"min="0"max="3"value="0"></label> <input name="Used levitate?"type="checkbox">
-	            </fieldset>
-	            <fieldset style="background-color:#d6e3bc">
-	            	<legend>Climbing</legend>
-		            <label>Did it climb? <select id="climbed" name="Did it climb?">
-		                <option selected="true"value="DNA">Did not attempt</option>
-		                <option value="Parked">Parked</option>
-		                <option value="Failed">Failed</option>
-		                <option value="Success">Success</option>
-		            </select></label>
-		            <label>How many did it help: <input type="number" min="0"max="2" name="How many robots did it help?"></label>
-		            <label>Was it helped? <input type="checkbox" name="Was it helped to climb"></label>
-		            <label>If so, how approx fast in seconds? Leave 0 for didnt climb: <input name="How long did it take to climb? (seconds)"id="climb-time"type="number"min="0"max="30"value="0"></label>
+	    			<label>Assisted: <select name="Assisted HAB Level">
+	    				<option value="None"selected="selected">None</option>
+	    			    <option value="1">1</option>
+	    			    <option value="2">2</option>
+	    			    <option value="3">3</option>
+	    			</select></label>
 	            </fieldset>
 	            <fieldset style="background-color:#ffff00">
 	           		<legend>Defense</legend>
-		            <label>How well does it play defense (Academy scale:) <select name="Played defense">
-		                <option value="NA">NA</option>
-		                <option value="1">1</option>
-		                <option value="2">2</option>
-		                <option value="3">3</option>
-		                <option value="4">4</option>
-		            </select></label>
-		            <label>How well does it react to defense (Academy scale:) <select name="Reacted to defense">
-		                <option value="NA">NA</option>
-		                <option value="1">1</option>
-		                <option value="2">2</option>
-		                <option value="3">3</option>
-		                <option value="4">4</option>
-		            </select></label>
+		            <label>Played Defense: <input type="checkbox" name="Played Defense"></label>
+		            <label>Defense notes: <input name="Defense notes"type="text"></label>
 	            </fieldset>
 	            <label>Primary focus: <select id="focus" required="true" name="Primary Focus">
 	                <option value=""disabled="true"selected="true"></option>
 	                <option value="None">None</option>
-	                <option value="Switch">Switch</option>
-	                <option value="Scale">Scale</option>
-	                <option value="Exchange">Exchange</option>
+	                <option value="Switch">Rocket</option>
+	                <option value="Scale">Cargo</option>
 	                <option value="Defense">Defense</option>
 	            </select></label>
 	            <label>Red score: <input name="Red score"id="red-score"type="number"min="0"max="700"required="true"></label>
 	            <label>Blue score: <input name="Blue score"id="blue-score"type="number"min="0"max="700"required="true"></label>
-	            <label>Alliance ownership: <input name="Alliance ownership"type="number"min="0"max="700"required="true"></label>
-	            <label>Total cubes by alliance: <input name="Total cubes by alliance"type="number"min="0"max="66"required="true"></label>
             </fieldset>
             <label>Comments:<input id="notes"type="text" name="Comments"></label> <label>Driver notes/fouls: <input name="Driver notes/fouls"id="driver-notes"type="text"></label>
-            <label>Got <u>Y</u>ellow Card: <input accesskey="y" name="Yellow card" type="checkbox"></label>
-            <label>Go<u>t</u> Foul: <input accesskey="t" name="Fouled" type="checkbox"></label>
-            <label>Got Tec<u>h</u> Foul: <input accesskey="h" name="Tech Fouled" type="checkbox"></label>
+            <label>Got Yellow Card: <input name="Yellow card" type="checkbox"></label>
+            <label>Got Foul: <input name="Fouled" type="checkbox"></label>
+            <label>Got Tech Foul: <input name="Tech Fouled" type="checkbox"></label>
             <br>
             <br>
     		<input type="submit"value="Submit">
